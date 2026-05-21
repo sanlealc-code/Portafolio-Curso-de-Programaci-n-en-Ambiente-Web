@@ -1,0 +1,25 @@
+https://github.com/sanlealc-code/Portafolio-ISW-521.git
+
+Primera actividad en parejas:
+
+Julián: 1.No es correcto, el internet se refiere especificamente a redes fisicas, es importante ya que la diferencia entre www y el internet como tal es la de un recurso y lugar de publicacion.
+
+Satniago: 2- Serian Ambas, ya que por un lado sería la web la que utilice el internet para hacer viajar el contenido sobre toda dicha infraestructura, que es una inmensa red de computadoras conectadas entre si.
+La WW es una enorme colección de páginas que se asienta sobreesa red de computadoras.
+
+Julián: 3.W3C se enfoca en capas de frontend IETF se encarga de la base para la creacion y publicacion por lo que ambos son necesarios pero IETF es mas importante
+
+Segunda actividad:
+A para la información pública, ya que es de acceso de todos; B, por temas de validación de usuarios, lo recomendable es Intranet; Y para el portal de constructoras Extranet por permitir extender de forma segura los servicios internos. 
+
+Respuesta honesta: Pensé que la más complicada con diferencia es el sistema interno de gestión de planillas para RRH por el manejo de datos confidenciales y su flujo.
+
+3: Si, mediante virtualización. 
+
+
+Tercera actividad. 
+
+
+1. Curso: utn.ac.cr./san-Carlos/2026-ii/isw-521
+2. utn.ac.cr/estudiantes/2022-0001
+3. utn.ac.cr/isw-521/semana-3/materiales

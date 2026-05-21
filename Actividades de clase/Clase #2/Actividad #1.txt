@@ -1,0 +1,9 @@
+1. NO, porque estamos hablando de las transgerencia de archivos de configuración CRÍTICOS entre los distintos microservicios - que por su arquitectura, tienden a ser bastante independientes - ya que sin UDP no hay certeza de que se devuelvan los archivos.
+
+2. La latencia de de los microservicios, el ACK, la retransmisión de datos y el ordenamiento de los mismos.
+
+3. Por poner un ejemplo concreto, en la transmisión, por ejemplo, deportiva (el torneo de candidatos de la FIDE para el campeonato mundial de ajedrez) o en videojuegos, como una partida en vivo de chess.com
+
+4. Es una pieza fundamental para la latencia entre microservicios y esencial para la conexión entre clientes y servidores en el TCP.
+
+
