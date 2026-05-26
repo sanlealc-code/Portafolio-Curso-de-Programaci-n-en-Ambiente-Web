@@ -1,0 +1,6 @@
+1. Es necesario configurar los hosts de Windows para hacer que la ipe coincida con el portafolio.local, la .api.local y el Admin.local.
+La misma IP cambiando el server_name y la dirección.
+
+2. Tres servidores conectados al puerto 80, pero distintos por el server_name
+
+3. Se dirigira el tráfico del primer bloque del ervidor para el primer archivo que encuentre, su IP y su puerto.

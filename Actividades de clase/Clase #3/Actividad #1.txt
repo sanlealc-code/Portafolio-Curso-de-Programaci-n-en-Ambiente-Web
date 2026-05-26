@@ -1,0 +1,14 @@
+1.
+	A- Ping para verificar la conectividad del hardware.
+	B-Sc query nginx para verificar si el fallo es del servidor.
+	
+
+C- Taskmgr: Bucar los errores y fallos críticos del hardware.
+
+2. 
+	A-Get Service Nginx para confirmar la conectividad con el hardware y el estado del servicio..
+	B- Nginx -t para validad que no existan errores en la configuración.
+	C-Restart Service Nginx para reiniciar todo el sistema. 
+
+3.
+En caso de un pantallaso azul o una pantalla completamente bloqueada. 

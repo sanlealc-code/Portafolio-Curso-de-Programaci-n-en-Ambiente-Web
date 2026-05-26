@@ -1,0 +1,9 @@
+1. Migrar a HTTP a HTTP2 permite, entre otras cosas, la muxtitiplicidad y la seguridad de los datos, la mejora con respecto a ptrolcolos como el UDP o el TCP para más seguridad o rapidez.
+
+
+2. Por qué a pesar de todo, no termina de bloquear enteramente el TCP.
+
+3. Podría funcionar dependiendo del tipo de comercio que se utilizará. Pero en genral, las ventajas de Quic podría facilitar mucho las cosas.  
+Habria que tomarse en cuenta la infraestructura de la red, el soporte de software o los firewalls o UDP´s. 
+
+4. Con herramientas de desarrollador de comandos, cURL's y otras herramientas como testers o Greekflare.

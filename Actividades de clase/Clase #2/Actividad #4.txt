@@ -1,0 +1,11 @@
+1. 6.10 segundos
+
+2. 199.74 ms
+
+3. 101.60 ms
+
+4. 204 recursos en total, de los cuales dos utilizaron HTTP/2, siendo la inmensa mayoría HTTP/1 y HTTP/3
+
+5. Un png que pesa 1,572 kB
+
+6.

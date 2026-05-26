@@ -1,0 +1,5 @@
+a. Let´s Encrypt es un intermediario.
+b. Domingo 2 de agosto de 2026, a las 1:33:49
+c. TLS.3
+d. no lo pude contestar.
+e. El sitio dejara de ser considerado seguro para navegadores como Chrome, Morzilla Firefo por el browser.  
