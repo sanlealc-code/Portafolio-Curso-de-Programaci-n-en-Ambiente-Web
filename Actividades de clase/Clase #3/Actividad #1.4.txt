@@ -1,0 +1,9 @@
+2. Es inviable porque el módulo asigna un proceso completo para el S.O en cada conexión. 
+
+1. 
+
+	A- Nginx tiene una arquitectura basada en asincronía y basada de eventos, que le permite tener bastantes usuarios.
+
+	B- WebSockets a diferencia de Apache Prefork cuenta con una buena escalabilidad que le permite tener muchas conexiones operativos de los distintos usuarios.
+
+3. 

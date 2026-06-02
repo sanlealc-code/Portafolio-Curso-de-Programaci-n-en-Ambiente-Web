@@ -1,0 +1,7 @@
+1. FTP suele enviar los daos de información en texto plano, siendo más inseguro que SFTP o SCP.
+SCP, tiene a facilitar más el intercambio de archivos, así que preferiblemente eso.
+El comando sería: dist: scp -r./dist usuario@pi_del_servidor:/ruta/donde/desplegar.
+
+2. Archivo .env local en el servidor, variables del entorno del sistema, Gestor de procesos y Systemd.
+
+3. Fuga de credenciales críticas, al exponer las contraseñas y demás datos sensibles en Jason Web Token; Al enviar el .env al repositorio, sin ser especificado se obliga al resto de los enotrnos a utilizar la misma configuración; Por el historial de commits realizados estos quedarían a la vista.

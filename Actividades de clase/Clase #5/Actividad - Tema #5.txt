@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Horario ISW</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    thead tr {
+      background-color: #5bc8f5;
+      font-weight: bold;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #d9d9d9;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #bcbcbc;
+    }
+    .receso {
+      color: gold;
+      font-weight: bold;
+    }
+    .curso {
+      color: #00cc44;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Hora</th>
+        <th>Lunes</th>
+        <th>Martes</th>
+        <th>Miércoles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>7:00</td>
+        <td class="curso">ISW-521</td>
+        <td class="curso">ISW-311</td>
+        <td>Libre</td>
+      </tr>
+      <tr>
+        <td>9:00</td>
+        <td colspan="3" class="receso">Receso</td>
+      </tr>
+      <tr>
+        <td>10:00</td>
+        <td class="curso">ISW-421</td>
+        <td class="curso">ISW-521</td>
+        <td class="curso">ISW-311</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
+
+
+https://onecompiler.com/html/44qzwxyvv

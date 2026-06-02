@@ -1,0 +1,5 @@
+1. Bare Metal, porque es un servidor físico, y permite una gran velocidad y transacciones a travez de una latencia crítica y máximo rendimiento.
+
+2. VPS por la escalabilidad que se puede proporcionar a algo que no necesita de tantos recursos a la hora de gastar. La escalabilidad es variable.
+
+3. Los contenedores pueden venir a ayudar a los microservicios porque permiten sus independencia. 

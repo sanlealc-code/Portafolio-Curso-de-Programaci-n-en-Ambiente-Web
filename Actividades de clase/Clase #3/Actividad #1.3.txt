@@ -1,0 +1,9 @@
+1.
+Significa: "Eror, puerto en uso" y quiere indicar que dicho puerto ya ha sido tomado por otro proceso activo del sistema.
+
+2. Netstat -ano
+
+3. Con el Taskkill
+
+4. Manejar errores del código, utilizar las variables del entorno, hacer un cierre seguro de la aplicación.
+Establecer claras los user_names, y definir bien el usuario del puerto.

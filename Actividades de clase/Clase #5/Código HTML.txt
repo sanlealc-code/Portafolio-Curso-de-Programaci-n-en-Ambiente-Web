@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería Multimedia - Curso en Línea UTN</title>
+</head>
+<body>
+
+  <h1>Galería de Recursos Multimedia - UTN</h1>
+
+<!-- 1. Imagen principal con <picture> y 2 fuentes: temática programación -->
+  <section>
+    <h2>Imagen del Curso</h2>
+    <picture>
+      <source
+        srcset="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&fm=webp"
+        type="image/webp"
+      >
+      <source
+        srcset="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&fm=jpg"
+        type="image/jpeg"
+      >
+      <img
+        src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&fm=jpg"
+        alt="Pantalla de computadora mostrando código de programación en un editor de texto"
+        title="Imagen de programación web - Curso UTN"
+        width="500"
+      >
+    </picture>
+  </section>
+
+  <!-- 2. Video educativo UTN via iframe de YouTube con controles nativos -->
+  <section>
+    <h2>Video de la Clase - UTN</h2>
+    <iframe
+      width="500"
+      height="315"
+      src="https://www.youtube.com/embed/kUMe1FH4CHE"
+      title="Video educativo de la Universidad Técnica Nacional de Costa Rica"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+
+  <!-- 3. Audio podcast con controles, sin loop -->
+  <section>
+    <h2>Podcast del Curso</h2>
+    <audio
+      controls
+      title="Podcast episodio 1: introducción a la programación web - UTN"
+    >
+      <source
+        src="https://www.w3schools.com/html/horse.mp3"
+        type="audio/mpeg"
+      >
+      <source
+        src="https://www.w3schools.com/html/horse.ogg"
+        type="audio/ogg"
+      >
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <p>Episodio 1: Introducción a la programación web - UTN</p>
+  </section>
+
+  <!-- 4. iframe Google Maps - Campus UTN Sede Central Atenas -->
+  <section>
+    <h2>Ubicación del Campus UTN</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3931.964!2d-84.3872!3d9.9794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e343a4f5b22f%3A0x8ae10f7e3f9c2e1!2sUniversidad%20T%C3%A9cnica%20Nacional!5e0!3m2!1ses!2scr!4v1717200000000!5m2!1ses!2scr"
+      width="500"
+      height="350"
+      title="Mapa de ubicación de la Universidad Técnica Nacional de Costa Rica, Sede Central Atenas"
+      sandbox="allow-scripts allow-same-origin"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+
+</body>
+</html>
+
+

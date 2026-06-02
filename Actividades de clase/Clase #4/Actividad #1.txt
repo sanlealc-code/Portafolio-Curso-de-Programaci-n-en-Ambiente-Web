@@ -1,0 +1,20 @@
+1. 
+
+	A) Arreglo del Login: "Fix (auth) - Fix the validation of the Login"
+
+	B) Cambios de Bryan está semana - 2
+"Develop the buisness logic on the module X"
+
+	C) Feature nuevo para el cliente -
+"Add to the client, the dashboard that is requeired"
+
+	D) Node - Build: add to an dependenc on the express"
+
+	E) .env - "Refactor: Set up the variables of the Project"
+
+	
+2. El commit .env representa el mayor de los peligros, ya que esto pues, es una mala practica que compromete la seguridad de los datos.
+
+
+
+3. Unracked y Stage. 

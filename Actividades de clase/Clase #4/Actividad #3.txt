@@ -1,0 +1,13 @@
+1. Un Fast-Forward Merge, porque el punter de main como ancestro de la rama de la característica, Git moverá dicho puntero hasta lar ama 9ca4
+
+2. 
+
+	A) Get Fitch Origin: Descarga toda la información y los commits al dispositivo local, sin que se cambie o edite nada adentro.
+	B) Git log origin/feature/dark-mode: Sirve para visualizar los mensajes exáctos de los comandos y las diferencias ente las ramas exactas.
+
+3. 
+
+	A) Título claro y descriptivo que vaya acorde a la información que se quiera enseñar.
+	B) Contexto y motivación: Una breve descripción de la situación y las razones detrás de cada cambio.
+	C) Resumen de cambios: Lista técnica de cada mdificación realizada en el proyecto.
+	D) Pruebas: La evidencia de los cambios.

@@ -1,0 +1,19 @@
+Blockquote se un bloque semántico para citar otras de fuentes 
+
+Span es en línea, es presentación y se utiliza para estilos CSS
+
+Strong: En línea y semántico. Es para enfatizar o destacar texto que es importantes.
+
+Article: Bloque y semántico, se utiliza para contenido independiente de cada pagina.
+
+B: En línea y presentacional. Se utiliza para poner en negrita algo. 
+
+Time: Es en línea, y es semántico. Se utiliza para indicar fecha y tiempo. 
+
+Ul: Bloque y semántico, para representar listas desordenadas. 
+
+Mark: En línea y semántico. Se utiliza para remarcar algo en un texto.
+
+Code: Línea y semántico, se utilizan como partes que contienen código de programación
+
+secction: Para enfatizar o colocar texto de una manera más general. 

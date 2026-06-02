@@ -1,0 +1,15 @@
+1. Por qué Git Fetch te permite inspeccionar lo que hizo tu compañero y averiguar que cosas podría tener (buenas prácticas o bugs) antes de ponerlo a funcionar en tu entorno de trabajo. 
+
+2. 
+
+	A) Git Fetch Origin para asegurarse tener la versión más reciente.
+	B) Git Rebase Origin que permite aplicar tus commits con está versión "más reciente" que hizo tu compañero. 
+
+3. En tu repositorio no hay commit que no se han realizado en tu PC Local.
+
+	A) Git Pull
+	B) Verificación y validación de bugs
+	C) Git Push
+
+
+Nota importante: *Force solo ramas personales. 

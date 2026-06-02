@@ -1,0 +1,6 @@
+1.
+C, poruqe visibiliza el Gmail y la contraseña (datos sensibles) y guardarlos en el LocalStorage es más peligroso.
+Además son más suceptibles a ataques XSC
+
+2. 
+La B, porque la  Json Web Token no debería estar en el LocalStorage pues esto sería muy delicado. 

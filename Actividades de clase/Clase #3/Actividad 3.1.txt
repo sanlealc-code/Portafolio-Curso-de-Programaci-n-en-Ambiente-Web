@@ -1,0 +1,5 @@
+1. Aplicación web, ya que permite al usuario interactuar.
+
+2. Sitio web, porqué es solo de lectura.
+
+3. Aplicación web, ya que también permite al usuario interactuar.
