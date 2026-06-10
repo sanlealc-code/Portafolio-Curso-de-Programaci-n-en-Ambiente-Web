@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Restauración — Toyota Pickup 4x4 1992</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="dashboard-wrapper">
+
+        <!-- ZONA A: Header del proyecto -->
+        <header class="dashboard-header">
+            <div class="header-brand">
+                <span class="header-logo">⚙️</span>
+                <div>
+                    <h1 class="project-title">Toyota Pickup 4x4 1992</h1>
+                    <p class="project-subtitle">Restauración Integral · Blanco Polar</p>
+                </div>
+            </div>
+            <div class="header-meta">
+                <span class="badge badge--active">En Progreso</span>
+                <p class="meta-date">Ingreso: 14 / 03 / 2026</p>
+                <p class="meta-tech">Técnico: Ing. Rodrigo Vargas</p>
+            </div>
+        </header>
+
+        <!-- ZONA B: Imagen principal del vehículo -->
+        <section class="vehicle-hero" aria-label="Foto principal del vehículo">
+            <figure class="hero-figure">
+                <div class="hero-image-placeholder" role="img"
+                    aria-label="Toyota Pickup 4x4 1992 — Blanco Polar en proceso de restauración">
+                    <div class="placeholder-icon">🛻</div>
+                    <p class="placeholder-label">Toyota Pickup 4x4 1992</p>
+                    <p class="placeholder-sub">Blanco Polar · Pre-pintura</p>
+                </div>
+                <figcaption class="hero-caption">
+                    Vista lateral izquierda · Pre-pintura · 14 / 03 / 2026
+                </figcaption>
+            </figure>
+            <div class="hero-progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-fill" style="--progress: 67%"></div>
+                </div>
+                <p class="progress-label">Avance general: <strong>67%</strong></p>
+            </div>
+        </section>
+
+        <!-- ZONA C: Sidebar del proyecto -->
+        <aside class="project-sidebar">
+            <div class="sidebar-card">
+                <h2 class="sidebar-card__title">Datos del Proyecto</h2>
+                <dl class="project-data">
+                    <dt>Placa</dt>
+                    <dd>SCR-4492</dd>
+                    <dt>VIN</dt>
+                    <dd>JT4RN93P1N0123847</dd>
+                    <dt>Motor</dt>
+                    <dd>2.4L · 22R-E</dd>
+                    <dt>Transmisión</dt>
+                    <dd>Manual 5 vel. · W56</dd>
+                    <dt>Kilometraje</dt>
+                    <dd>214 800 km</dd>
+                    <dt>Presupuesto aprobado</dt>
+                    <dd>₡ 2 850 000</dd>
+                    <dt>Ejecutado</dt>
+                    <dd>₡ 1 907 000</dd>
+                </dl>
+            </div>
+            <div class="sidebar-card">
+                <h2 class="sidebar-card__title">Propietario</h2>
+                <address class="owner-info">
+                    <p>Marco Antonio Sibaja Rojas</p>
+                    <p>📞 8812-4491</p>
+                    <p>📧 msibaja@gmail.com</p>
+                </address>
+            </div>
+            <div class="sidebar-card sidebar-card--highlight">
+                <h2 class="sidebar-card__title">Presupuesto</h2>
+                <div class="budget-visual">
+                    <div class="budget-ring">
+                        <svg viewBox="0 0 80 80" class="ring-svg" aria-hidden="true">
+                            <circle cx="40" cy="40" r="32" class="ring-bg" />
+                            <circle cx="40" cy="40" r="32" class="ring-fill" style="--pct: 67" />
+                        </svg>
+                        <span class="ring-label">67%</span>
+                    </div>
+                    <div class="budget-breakdown">
+                        <p class="budget-item budget-item--used">
+                            <span class="budget-dot budget-dot--used"></span>
+                            Ejecutado
+                        </p>
+                        <p class="budget-item budget-item--remaining">
+                            <span class="budget-dot budget-dot--remaining"></span>
+                            Disponible
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ZONA D: Estado mecánico -->
+        <section class="status-section" aria-labelledby="status-heading">
+            <h2 id="status-heading" class="section-title">Estado Mecánico</h2>
+            <div class="status-grid">
+
+                <article class="status-card status-card--done">
+                    <header class="status-card__header">
+                        <span class="status-icon" aria-hidden="true">🔧</span>
+                        <h3 class="status-card__name">Motor 22R-E</h3>
+                    </header>
+                    <p class="status-card__state">Completado</p>
+                    <p class="status-card__detail">Rectificación de cabeza, cambio de empaque, ajuste de válvulas y
+                        afinación completa del 22R-E.</p>
+                    <meter class="status-meter" value="100" min="0" max="100" title="100%"></meter>
+                </article>
+
+                <article class="status-card status-card--in-progress">
+                    <header class="status-card__header">
+                        <span class="status-icon" aria-hidden="true">⚙️</span>
+                        <h3 class="status-card__name">Caja W56</h3>
+                    </header>
+                    <p class="status-card__state">En Proceso</p>
+                    <p class="status-card__detail">Reemplazo de sincronizadores 3.ª y 4.ª, revisión de horquillas y
+                        rodamiento de piloto.</p>
+                    <meter class="status-meter" value="60" min="0" max="100" title="60%"></meter>
+                </article>
+
+                <article class="status-card status-card--pending">
+                    <header class="status-card__header">
+                        <span class="status-icon" aria-hidden="true">🔄</span>
+                        <h3 class="status-card__name">Transfer 4WD</h3>
+                    </header>
+                    <p class="status-card__state">Pendiente</p>
+                    <p class="status-card__detail">Inspección y cambio de retenes del transfer case. Verificación del
+                        actuador de 4WD.</p>
+                    <meter class="status-meter" value="15" min="0" max="100" title="15%"></meter>
+                </article>
+
+                <article class="status-card status-card--pending">
+                    <header class="status-card__header">
+                        <span class="status-icon" aria-hidden="true">🛞</span>
+                        <h3 class="status-card__name">Suspensión Delantera</h3>
+                    </header>
+                    <p class="status-card__state">Pendiente</p>
+                    <p class="status-card__detail">Cambio de rotulas de dirección, terminales de cremallera y
+                        amortiguadores delanteros.</p>
+                    <meter class="status-meter" value="0" min="0" max="100" title="0%"></meter>
+                </article>
+
+                <article class="status-card status-card--done">
+                    <header class="status-card__header">
+                        <span class="status-icon" aria-hidden="true">🎨</span>
+                        <h3 class="status-card__name">Carrocería / Pintura</h3>
+                    </header>
+                    <p class="status-card__state">Completado</p>
+                    <p class="status-card__detail">Masillado, lijado y pintura en base agua. Acabado en Blanco Polar OEM
+                        con barniz de dos capas.</p>
+                    <meter class="status-meter" value="100" min="0" max="100" title="100%"></meter>
+                </article>
+
+                <article class="status-card status-card--in-progress">
+                    <header class="status-card__header">
+                        <span class="status-icon" aria-hidden="true">💡</span>
+                        <h3 class="status-card__name">Sistema Eléctrico</h3>
+                    </header>
+                    <p class="status-card__state">En Proceso</p>
+                    <p class="status-card__detail">Reemplazo de arnés principal, restauración del tablero y conversión a
+                        faros H4 de alto rendimiento.</p>
+                    <meter class="status-meter" value="45" min="0" max="100" title="45%"></meter>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ZONA E: Inventario de repuestos -->
+        <section class="inventory-section" aria-labelledby="inventory-heading">
+            <h2 id="inventory-heading" class="section-title">Inventario de Repuestos</h2>
+            <ul class="parts-list" role="list">
+
+                <li class="parts-item">
+                    <div class="part-info">
+                        <span class="part-icon" aria-hidden="true">🔩</span>
+                        <div class="part-details">
+                            <p class="part-name">Empaque de Cabeza — 22R-E (MLS)</p>
+                            <p class="part-sku">SKU: 11115-35040 · Toyota OEM</p>
+                        </div>
+                    </div>
+                    <span class="part-price">₡ 38 500</span>
+                    <div class="part-actions">
+                        <span class="badge badge--stock-ok">En Stock</span>
+                        <button class="btn-buy" type="button" aria-label="Ordenar Empaque de Cabeza 22R-E">
+                            Ordenar
+                        </button>
+                    </div>
+                </li>
+
+                <li class="parts-item">
+                    <div class="part-info">
+                        <span class="part-icon" aria-hidden="true">🔧</span>
+                        <div class="part-details">
+                            <p class="part-name">Kit Sincronizadores Caja W56</p>
+                            <p class="part-sku">SKU: 33036-35030 · Aisin OEM</p>
+                        </div>
+                    </div>
+                    <span class="part-price">₡ 126 000</span>
+                    <div class="part-actions">
+                        <span class="badge badge--stock-ok">En Stock</span>
+                        <button class="btn-buy" type="button" aria-label="Ordenar Kit Sincronizadores Caja W56">
+                            Ordenar
+                        </button>
+                    </div>
+                </li>
+
+                <li class="parts-item">
+                    <div class="part-info">
+                        <span class="part-icon" aria-hidden="true">🛞</span>
+                        <div class="part-details">
+                            <p class="part-name">Rótula de Dirección Delantera (par)</p>
+                            <p class="part-sku">SKU: 43330-35060 · Moog Premium</p>
+                        </div>
+                    </div>
+                    <span class="part-price">₡ 74 200</span>
+                    <div class="part-actions">
+                        <span class="badge badge--stock-low">Pocas unidades</span>
+                        <button class="btn-buy" type="button" aria-label="Ordenar Rótula de Dirección Delantera">
+                            Ordenar
+                        </button>
+                    </div>
+                </li>
+
+                <li class="parts-item">
+                    <div class="part-info">
+                        <span class="part-icon" aria-hidden="true">🔄</span>
+                        <div class="part-details">
+                            <p class="part-name">Retén Principal Transfer Case</p>
+                            <p class="part-sku">SKU: 90311-46013 · Toyota OEM</p>
+                        </div>
+                    </div>
+                    <span class="part-price">₡ 12 800</span>
+                    <div class="part-actions">
+                        <span class="badge badge--out-of-stock">Agotado</span>
+                        <button class="btn-buy" type="button" aria-label="Cotizar Retén Principal Transfer Case"
+                            disabled>
+                            Cotizar
+                        </button>
+                    </div>
+                </li>
+
+                <li class="parts-item">
+                    <div class="part-info">
+                        <span class="part-icon" aria-hidden="true">💡</span>
+                        <div class="part-details">
+                            <p class="part-name">Arnés Eléctrico Principal — Cabina</p>
+                            <p class="part-sku">SKU: 82111-89626 · AutoZone Select</p>
+                        </div>
+                    </div>
+                    <span class="part-price">₡ 89 900</span>
+                    <div class="part-actions">
+                        <span class="badge badge--stock-ok">En Stock</span>
+                        <button class="btn-buy" type="button" aria-label="Ordenar Arnés Eléctrico Principal">
+                            Ordenar
+                        </button>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <!-- ZONA F: Footer del taller -->
+        <footer class="dashboard-footer">
+            <div class="footer-brand">
+                <p class="footer-name">Taller Mecánico Vargas &amp; Asociados</p>
+                <p class="footer-address">San Carlos, Alajuela · Costa Rica</p>
+            </div>
+            <div class="footer-contact">
+                <p>📞 2460-7723 · 8899-4451</p>
+                <p>📧 info@tallervargas.cr</p>
+            </div>
+            <div class="footer-legal">
+                <p class="footer-budget-status">
+                    Presupuesto N.° <strong>RV-2026-047</strong> — Aprobado y firmado
+                </p>
+                <p class="footer-disclaimer">
+                    Los precios indicados no incluyen IVA. Sujeto a disponibilidad de repuestos.
+                </p>
+            </div>
+        </footer>
+
+    </div><!-- /.dashboard-wrapper -->
+
+</body>
+
+</html>

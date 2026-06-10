@@ -1,0 +1,886 @@
+:root {
+    /* Paleta */
+    --color-bg: #0A0E14;
+    --color-bg-card: #111820;
+    --color-bg-card-alt: #16202B;
+    --color-bg-stripe: #0D1520;
+    --color-accent: #E8A020;
+    /* ámbar — color del aceite de motor */
+    --color-accent-dim: #7A5010;
+    --color-accent-glow: rgba(232, 160, 32, 0.12);
+    --color-white: #F0EDE8;
+    /* blanco cálido — color del vehículo */
+    --color-text: #D4C9B8;
+    --color-text-muted: #7A7060;
+    --color-border: #1E2A38;
+    --color-border-lit: #2A3A50;
+    --color-success: #4CAF7A;
+    --color-warning: #E8A020;
+    --color-danger: #E05050;
+    --color-info: #4A9ECC;
+
+    /* Espaciado */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+
+    /* Tipografía fluida */
+    --font-xs: clamp(0.7rem, 1.2vw, 0.8rem);
+    --font-sm: clamp(0.8rem, 1.6vw, 0.9rem);
+    --font-base: clamp(0.9rem, 2vw, 1rem);
+    --font-lg: clamp(1rem, 2.5vw, 1.25rem);
+    --font-xl: clamp(1.25rem, 3.5vw, 1.75rem);
+    --font-2xl: clamp(1.6rem, 4.5vw, 2.2rem);
+
+    /* Radios */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 14px;
+    --radius-xl: 20px;
+
+    /* Sombras */
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--color-border);
+    --shadow-accent: 0 0 20px rgba(232, 160, 32, 0.15);
+
+    /* Tipografías */
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+
+/* ─── 2. RESET Y BASE ──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: var(--font-base);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Líneas de grilla decorativas de fondo */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(232, 160, 32, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(232, 160, 32, 0.025) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* ─── 3. LAYOUT PRINCIPAL — CSS GRID ASIMÉTRICO ────────────── */
+.dashboard-wrapper {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr auto auto auto;
+    grid-template-areas:
+        "header  header"
+        "hero    sidebar"
+        "status  status"
+        "parts   parts"
+        "footer  footer";
+    gap: var(--space-lg);
+    max-width: 1440px;
+    margin-inline: auto;
+    padding: var(--space-lg);
+}
+
+/* Asignación de áreas */
+.dashboard-header {
+    grid-area: header;
+}
+
+.vehicle-hero {
+    grid-area: hero;
+}
+
+.project-sidebar {
+    grid-area: sidebar;
+}
+
+.status-section {
+    grid-area: status;
+}
+
+.inventory-section {
+    grid-area: parts;
+}
+
+.dashboard-footer {
+    grid-area: footer;
+}
+
+
+/* ─── 4. ZONA A — HEADER ───────────────────────────────────── */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-top: 3px solid var(--color-accent);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    box-shadow: var(--shadow-card);
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.header-logo {
+    font-size: 2rem;
+    line-height: 1;
+    filter: grayscale(0.2);
+}
+
+.project-title {
+    font-size: var(--font-2xl);
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+
+.project-subtitle {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+    margin-top: var(--space-xs);
+}
+
+.header-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-xs);
+}
+
+.meta-date,
+.meta-tech {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+
+/* ─── 5. BADGES ────────────────────────────────────────────── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0.25em 0.75em;
+    border-radius: 999px;
+    font-size: var(--font-xs);
+    font-weight: 600;
+    font-family: var(--font-mono);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.badge--active {
+    background-color: rgba(232, 160, 32, 0.15);
+    color: var(--color-accent);
+    border: 1px solid rgba(232, 160, 32, 0.35);
+}
+
+.badge--active::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.badge--stock-ok {
+    background-color: rgba(76, 175, 122, 0.12);
+    color: var(--color-success);
+    border: 1px solid rgba(76, 175, 122, 0.3);
+}
+
+.badge--stock-low {
+    background-color: rgba(232, 160, 32, 0.12);
+    color: var(--color-warning);
+    border: 1px solid rgba(232, 160, 32, 0.3);
+}
+
+.badge--out-of-stock {
+    background-color: rgba(224, 80, 80, 0.12);
+    color: var(--color-danger);
+    border: 1px solid rgba(224, 80, 80, 0.3);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+}
+
+
+/* ─── 6. ZONA B — VEHICLE HERO ─────────────────────────────── */
+.vehicle-hero {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-figure {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    min-height: 260px;
+}
+
+/* Placeholder cuando no hay imagen cargada */
+.hero-image-placeholder {
+    flex: 1;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    background: linear-gradient(135deg, #0D1520 0%, #111D2A 50%, #0A1018 100%);
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(232, 160, 32, 0.08) 0%, transparent 70%);
+}
+
+.placeholder-icon {
+    font-size: clamp(4rem, 10vw, 7rem);
+    filter: drop-shadow(0 4px 24px rgba(232, 160, 32, 0.3));
+    position: relative;
+    z-index: 1;
+}
+
+.placeholder-label {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    color: var(--color-white);
+    position: relative;
+    z-index: 1;
+}
+
+.placeholder-sub {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-caption {
+    display: block;
+    font-size: var(--font-xs);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--color-bg-stripe);
+    border-top: 1px solid var(--color-border);
+}
+
+.hero-progress {
+    padding: var(--space-md) var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--color-border);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: var(--progress);
+    background: linear-gradient(90deg, var(--color-accent-dim), var(--color-accent));
+    border-radius: 999px;
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(232, 160, 32, 0.5);
+}
+
+.progress-label {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+.progress-label strong {
+    color: var(--color-accent);
+    font-weight: 700;
+}
+
+
+/* ─── 7. ZONA C — SIDEBAR ──────────────────────────────────── */
+.project-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.sidebar-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.sidebar-card--highlight {
+    border-color: var(--color-accent-dim);
+    background: linear-gradient(135deg, var(--color-bg-card) 0%, #16200E 100%);
+}
+
+.sidebar-card__title {
+    font-size: var(--font-sm);
+    font-weight: 600;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+}
+
+/* Definición list de datos */
+.project-data {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-xs) var(--space-md);
+    align-items: baseline;
+}
+
+.project-data dt {
+    font-size: var(--font-xs);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.project-data dd {
+    font-size: var(--font-sm);
+    color: var(--color-white);
+    font-family: var(--font-mono);
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Info del propietario */
+.owner-info {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.owner-info p {
+    font-size: var(--font-sm);
+    color: var(--color-text);
+    font-family: var(--font-mono);
+}
+
+/* Anillo de presupuesto */
+.budget-visual {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.budget-ring {
+    position: relative;
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+}
+
+.ring-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.ring-bg {
+    fill: none;
+    stroke: var(--color-border);
+    stroke-width: 8;
+}
+
+.ring-fill {
+    fill: none;
+    stroke: var(--color-accent);
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 201.06;
+    stroke-dashoffset: calc(201.06 - (201.06 * var(--pct) / 100));
+    filter: drop-shadow(0 0 4px rgba(232, 160, 32, 0.5));
+}
+
+.ring-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-sm);
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--color-accent);
+}
+
+.budget-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.budget-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-xs);
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+}
+
+.budget-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.budget-dot--used {
+    background-color: var(--color-accent);
+}
+
+.budget-dot--remaining {
+    background-color: var(--color-border);
+}
+
+
+/* ─── 8. TÍTULOS DE SECCIÓN ────────────────────────────────── */
+.section-title {
+    font-size: var(--font-xl);
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: var(--space-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 1.2em;
+    background: var(--color-accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+
+/* ─── 9. ZONA D — STATUS GRID (GRID INTRÍNSECO) ───────────── */
+.status-section {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-card);
+}
+
+/* PATRÓN CENTRAL: auto-fit + minmax — responsividad sin @media */
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-md);
+}
+
+.status-card {
+    background-color: var(--color-bg-card-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.status-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.status-card--done::before {
+    background-color: var(--color-success);
+}
+
+.status-card--in-progress::before {
+    background-color: var(--color-warning);
+}
+
+.status-card--pending::before {
+    background-color: var(--color-border-lit);
+}
+
+.status-card:hover {
+    border-color: var(--color-border-lit);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.status-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.status-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.status-card__name {
+    font-size: var(--font-base);
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.3;
+}
+
+.status-card__state {
+    font-size: var(--font-xs);
+    font-weight: 600;
+    font-family: var(--font-mono);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.status-card--done .status-card__state {
+    color: var(--color-success);
+}
+
+.status-card--in-progress .status-card__state {
+    color: var(--color-warning);
+}
+
+.status-card--pending .status-card__state {
+    color: var(--color-text-muted);
+}
+
+.status-card__detail {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    line-height: 1.55;
+    flex: 1;
+}
+
+/* Meter nativo estilizado */
+.status-meter {
+    width: 100%;
+    height: 6px;
+    border-radius: 999px;
+    border: none;
+    overflow: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--color-border);
+    margin-top: auto;
+}
+
+.status-meter::-webkit-meter-bar {
+    background-color: var(--color-border);
+    border: none;
+    border-radius: 999px;
+}
+
+.status-card--done .status-meter::-webkit-meter-optimum-value,
+.status-card--done .status-meter::-moz-meter-bar {
+    background-color: var(--color-success);
+    border-radius: 999px;
+}
+
+.status-card--in-progress .status-meter::-webkit-meter-optimum-value,
+.status-card--in-progress .status-meter::-moz-meter-bar {
+    background-color: var(--color-warning);
+    border-radius: 999px;
+}
+
+.status-card--pending .status-meter::-webkit-meter-optimum-value,
+.status-card--pending .status-meter::-moz-meter-bar {
+    background-color: var(--color-text-muted);
+    border-radius: 999px;
+}
+
+
+/* ─── 10. ZONA E — INVENTARIO DE REPUESTOS ─────────────────── */
+.inventory-section {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-card);
+}
+
+.parts-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ─── PATRÓN FLEXBOX REQUERIDO ─── */
+.parts-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+    transition: background-color 0.15s ease;
+}
+
+.parts-item:first-child {
+    border-top: 1px solid var(--color-border);
+}
+
+.parts-item:hover {
+    background-color: var(--color-bg-stripe);
+}
+
+.part-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    flex-grow: 1;
+    /* crece para ocupar espacio disponible */
+    min-width: 0;
+    /* permite truncamiento de texto */
+}
+
+.part-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.part-details {
+    min-width: 0;
+    /* crítico para overflow ellipsis */
+}
+
+.part-name {
+    font-size: var(--font-sm);
+    font-weight: 600;
+    color: var(--color-white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.part-sku {
+    font-size: var(--font-xs);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.part-price {
+    flex-shrink: 0;
+    /* NO se comprime */
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: var(--font-base);
+    color: var(--color-accent);
+    white-space: nowrap;
+}
+
+.part-actions {
+    flex-shrink: 0;
+    /* NO se comprime */
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.btn-buy {
+    padding: 0.35em 0.9em;
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent-dim);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: var(--font-xs);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+}
+
+.btn-buy:hover:not(:disabled) {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #0A0E14;
+}
+
+.btn-buy:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.btn-buy:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: var(--color-border);
+    color: var(--color-text-muted);
+}
+
+
+/* ─── 11. ZONA F — FOOTER ──────────────────────────────────── */
+.dashboard-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-md);
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-bottom: 3px solid var(--color-accent-dim);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    box-shadow: var(--shadow-card);
+}
+
+.footer-name {
+    font-size: var(--font-base);
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: var(--space-xs);
+}
+
+.footer-address {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+.footer-contact p {
+    font-size: var(--font-sm);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+    line-height: 1.8;
+}
+
+.footer-legal {
+    text-align: right;
+}
+
+.footer-budget-status {
+    font-size: var(--font-sm);
+    color: var(--color-success);
+    font-family: var(--font-mono);
+    margin-bottom: var(--space-xs);
+}
+
+.footer-budget-status strong {
+    font-weight: 700;
+}
+
+.footer-disclaimer {
+    font-size: var(--font-xs);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+
+/* ─── 12. ACCESIBILIDAD ────────────────────────────────────── */
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* Respeta preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
