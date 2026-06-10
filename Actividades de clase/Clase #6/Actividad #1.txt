@@ -1,0 +1,9 @@
+	A. RGB. R=13, G=110, B=253.
+	L1= 0.1833
+	Colo de texto blanco: R=255, G=255, 	B=255.
+	L2=1.0
+---------------------------------------------
+	B. EL AA para texto normal, si 	cumple. 
+	Mientras que con el triple AAA, No, 	ya que el ratio es 7.1
+---------------------------------------------
+	C. Se considera normal con 16px. 

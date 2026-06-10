@@ -1,0 +1,33 @@
+1. 
+Porque el ordenador sigue el mismo comportamiento del orden esencial del D.O.M, y, por consiguiente, busca enfocarse en el siguiente elemento enfocable en el código HTML.
+
+2. 
+Crear una focus trap, que permita identificar los limites del model, interceptar la salida y redirigir el foco en el ultimo elemento que se mueva el foco manualmente al primero. 
+
+3. 
+javascript
+// 1. Obtener todos los elementos enfocables del modal
+const focusableElements = modal.querySelectorAll('a, button, input, [tabindex]');
+const firstElement = focusableElements;
+const lastElement = focusableElements[focusableElements.length - 1];
+
+modal.addEventListener('keydown', (e) => {
+    // Verificar si la tecla presionada es TAB
+    if (e.key === 'Tab') {
+        
+        // Caso: Shift + Tab (retroceder)
+        if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
+                e.preventDefault();
+                lastElement.focus(); // Salta al último
+            }
+        } 
+        // Caso: Tab solo (avanzar)
+        else {
+            if (document.activeElement === lastElement) {
+                e.preventDefault();
+                firstElement.focus(); // Vuelve al primero
+            }
+        }
+    }
+});

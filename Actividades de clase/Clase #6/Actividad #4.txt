@@ -1,0 +1,9 @@
+1. Conflicto de roles de Landmarks, role=banner y role="navegation"
+En ARIA, los elementos HTML5 ya tienen roles semánticos implícitos. 
+
+2. El elemento h2 tiene un atributo arialbel="Subtitulo" pese a que el texto visible es de un navegador main.
+
+3. La utilización de aria hidden en el contenido informativo es problematioco por estar en un div con aria-hidden= true. 
+
+4. Redundancia con loas etiquetas de botones extra en el texto menú con aria-label, de abrir menú. 
+No es un error critico pero se recomienta un nombre asequible para el label.

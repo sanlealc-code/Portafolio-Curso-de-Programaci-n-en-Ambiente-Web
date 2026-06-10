@@ -1,0 +1,5 @@
+1. El float deja de tener hijos, por lo que se ignoran las instrucciones de su flotabilidad.
+
+2. Los hijos del flex se convierten en flex ítems, haciendo que los valores displayse blockifiqueen. 
+
+3. No, las diferencias del Flexbox es que no existen el colapso de márgenes. 

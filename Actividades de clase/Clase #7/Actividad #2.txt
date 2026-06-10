@@ -1,0 +1,11 @@
+			ROW																	COLUMN
+Justify  Content:	Main Axis: Horizontal															Main Axis: Vertical
+
+
+Align-Items:		Cross Axis: Vertical 															Cross Axis: Horizontal
+
+
+Flex-basis:		Main Size; WODTH															Main Size: Height
+
+
+WIDTH:			Principal																Transversal
