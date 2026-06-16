@@ -1,0 +1,47 @@
+9
+Resolverlo a la vieja usanza significa concebir una consulta de medios y reescribir a pata veintitres clases impactadas. eso trae aparejado entre veinticinco y treinta líneas de código, además con un posibilidad grande de omitir alguna clase trayendo consigo desemejanzas
+
+La solución mediante Design Tokens hace que, las clases se rehacen para leer un valor central por ejemplo var(--espaciado-base)
+para la modificacion pedida solo hacen falta tres lineas de CSS nueva redefiniendo la validez del token dentro de un consulta de medios.
+cualquier alteracion por venir se arreglaría editando solo una linea
+
+
+Actividad 10
+El plan no funciona, porqu las variables de SASS como el $tema-fondo existen nada mas en el instante de la compilacion; el navegador recibe el precio ya "grabado" en el CSS sin formato. tratar de mudarlo con JavaScript en el navegador es algo irrealizable puesto que la variable ya no se halla en el tiempo de ejecucion.
+La correción minima sería: mover el valor a una variable CSS nativa en el :root por ejemplo --tema-fondo y usar document documentElement style setProperty en JavaScript para refrescarla al momento
+
+.
+
+Actividad 11:
+el texto de CSS plano final es este el 
+.card { border-radius: 8px; }
+.card .card-titulo { font-weight: bold; }   /* Descendiente con espacio */
+.card:hover { transform: scale(1.02); }     /* El & pega al padre sin espacio */
+.card--destacada { border: 2px solid gold; } /* El & concatena para una clase nueva */
+. La clave es que el símbolo & concatena el nombre, permitiendo crear modificadores independientes como en la convención BEM
+ facilitando la creacion de modificadores autonomos al modo BEM
+
+
+Actividad 12 
+Lista de parciales (Arquitectura 7-1):
+: _variables.scss (tokens y paleta) y _mixins.scss (lógica reutilizable)
+.
+Base y Componentes: _reset.scss, _tipografia.scss, _botones.scss, _tarjetas.scss y _formularios.scss
+.
+Páginas: _catalogo.scss, _checkout.scss y _blog.scss
+.
+Mixin reutilizable: Un ejemplo ideal sería un @mixin tarjeta-producto o un @mixin boton-accion($color), que se aplicarían en las secciones de catálogo, carrito y checkout para mantener la consistencia
+.
+Actividad 13: 
+aspecto y tactica: Parecera una caja amarilla tenue con letra oscura y un boton chiquito a la diestra
+. esto muestra una estrategia de elementos con sentido (OOCSS) que favorece rapidez, no obstant que hace que muchas paginas se vean identicas
+. Un botón turquesa y redondo, es algo factible mediante tres caminos: una sobrescritura con CSS nativo tuyo(esto se puede poner dificil por la especificidad), recomilando las variables SASS de Bootstrap (una forma mas pulcra pero necesitando herramientas), o utilizando estilos en linea (no muy recomendable)
+
+CSS escrito. El desarrollador NO escribio lineas de CSS algunas, debido a que tan solo hizo uso de clases de HTML que ya existian en el framework.
+
+Actividad 14: 
+Escenario A (Startup). Tiene que ser Bootstrap ya que proporciona da velocidad de desarrollo de alto nivel con componentes listos para su uso, y su aspecto comun no es un impedimento para validacion interna.
+El principal riesgo,  es que pede aparecer una deuda tecnica importante si el proyecto crece y necesitara personalizacion visual intensa mas adelante.
+
+Por otra parte, en el escenario B (Marca Premium) es menestes escojer Tailwind ya que facilita la volcadura del design system de Figma directo como design tokens, y asegura una identidad visual exclusiva con performance optimo por medio de su motor JIT.
+Aquie el riesgo sería de dependencia al necesitar un tiempo de aprendizaje para el equipo, y muchisima disciplina al crear componentes para no "ensuciar" el HTML a cada momento.
