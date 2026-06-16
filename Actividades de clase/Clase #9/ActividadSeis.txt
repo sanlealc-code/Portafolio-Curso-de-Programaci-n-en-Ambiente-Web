@@ -1,0 +1,5 @@
+1. El promo 4k jpg, obliga a los usuarios a descargar imágenes pesada. 
+
+2. El mantenimiento. Redundancia al escribir 4 veces el diwth.
+
+3. Está construido como dekstop-first pese a ser orientado a mobile. 
