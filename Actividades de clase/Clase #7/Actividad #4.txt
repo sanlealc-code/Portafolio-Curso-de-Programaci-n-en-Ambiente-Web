@@ -1,0 +1,5 @@
+1. La falta de propiedad flex:wrap; wrap. Slo funciona cuando el contenedor flex tiene multiples líneas de contenido.
+
+2. Lla propiedad que si podría estar actuando es align-item.
+
+3. Para esto, hay que debilitar el salto de línea. También agregarle una línea de flex wrap. 

@@ -1,0 +1,9 @@
+1. Los mueve hacia abajo ya que la conexión con Column hace que el eje principal se vuelva vertical, el Justify-Content se posicione los elementos en la parte inferior.
+
+2. Controla el Cross Axis que en una configuración de columna es el eje horizontal.
+
+3. La forma más eficiente es cambiarla a Row, y que las propiedades se alineen a funcionar con el desarrollo de esperar.
+
+4. La lógica de las propiedades debería invertirse.
+Justify-Content: Center
+Align-Items: Flex-End 

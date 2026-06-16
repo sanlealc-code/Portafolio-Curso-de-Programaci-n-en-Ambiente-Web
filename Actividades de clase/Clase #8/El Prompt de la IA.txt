@@ -1,0 +1,2 @@
+Se le pego una sección del documento que pedía y las partes claves del código, además de contextualizarle la manera en que estaba configurada la conexión con snitch y la versión de Antygravity. 
+Posteriormente, se le pidió la realización del index del HTML y del CSS. 
