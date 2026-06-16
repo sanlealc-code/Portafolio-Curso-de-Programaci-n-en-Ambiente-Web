@@ -1,0 +1,37 @@
+1. Los pixeles 16 y 8 se dividen en 2 componentes, mientras que los colores solo en 3.
+
+2: Nombres, los nombres son semánticos, permiten el intercambio de variales cuando deberían ser nombres de valor.
+
+3. Centralización: Cualquier cambio en una sola línea de ódigo, cambia la identidad visual por estar todo en el root.
+
+
+
+1. Definición de :root con Design Tokens */
+:root {
+  /* Colores */
+  --color-primary: #0a7d4f;
+  --color-white: #ffffff;
+
+  /* Dimensiones y Espaciado */
+  --spacing-base: 16px;
+  --border-radius-base: 8px;
+  --border-width-thin: 2px;
+}
+
+2. Reglas reescritas con tokens */
+.boton-comprar { 
+  background: var(--color-primary); 
+  color: var(--color-white); 
+  padding: var(--spacing-base); 
+  border-radius: var(--border-radius-base); 
+}
+
+.enlace-activo { 
+  color: var(--color-primary); 
+}
+
+.tarjeta-promo { 
+  border: var(--border-width-thin) solid var(--color-primary); 
+  padding: var(--spacing-base); 
+  border-radius: var(--border-radius-base); 
+}

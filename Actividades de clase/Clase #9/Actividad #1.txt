@@ -1,0 +1,5 @@
+1. Falta la etiqueta del Viewport.
+
+2. Con el Devtools.
+
+Depende de cada caso.

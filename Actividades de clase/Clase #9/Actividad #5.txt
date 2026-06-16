@@ -1,0 +1,21 @@
+/* Estilos Base (Mobile) */
+.productos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* Tablet / Pantallas Medianas */
+@media (min-width: 600px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Desktop / Pantallas Grandes */
+@media (min-width: 1024px) {
+  .productos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

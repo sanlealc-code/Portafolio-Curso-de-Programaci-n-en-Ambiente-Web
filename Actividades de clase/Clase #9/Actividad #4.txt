@@ -1,0 +1,5 @@
+1. Se encarga del width máximo de 539 px, el grid del template de la columna a 1fr
+
+2- Un width mínimo de 748 La orientación es al Landescape.
+
+3. Se oultan los nax, footes, y anuncios del Print
