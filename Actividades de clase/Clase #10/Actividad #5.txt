@@ -1,0 +1,33 @@
+SWITCHER:
+
+let rol= "Admin";
+var permisos;
+
+if (rol = "Admin") {
+    let permiso = "¡Total!";
+    console.log(mensaje); 
+}
+
+else if (rol = "Editor") {
+    let permiso = "¡Lectura-Escritura!";
+    console.log(mensaje); 
+}
+
+else if (rol = "viewer") {
+    let permiso = "¡solo-lectura!";
+    console.log(mensaje); 
+
+}
+else {
+    let permiso = "¡sin-acceso!";
+    console.log(mensaje);
+}
+
+TERNARIO:
+
+let rol = "Admin"
+const estado = Rol = Admin ? "¡Permiso total!" :
+               Rol = Editor "¡Lectura-escritura!" :
+               Rol = Viewer ? ¡Solo lectura!" :
+                "Rol no válid0";
+console.log(estado);

@@ -1,0 +1,11 @@
+#1: default
+
+#2: false
+
+#3: usuario
+
+#4: null
+
+#5: Al final, devolvería false debido a que el === lo leería, como comparación estricta, un número igual a un string.
+
+#6: True, Si funcionaria.

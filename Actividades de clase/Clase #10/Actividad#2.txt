@@ -1,0 +1,7 @@
+1. La variable no está definida. 
+
+B. No está inciaidno la función. Es un error de referencias. 
+
+C. El constante se define, y al principio va bien, pero luego marca al objeto como algo vacio, cosa que provocara errores.
+
+D. Error con las llaves, quedá disponible pero terminaría en 3. 

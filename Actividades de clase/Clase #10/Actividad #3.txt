@@ -1,0 +1,27 @@
+A. 
+1+"3" 
+Resultado: 13
+Tipo: Implicita
+
+B.
+Resultado: 3
+Tipo: Explicita
+
+C.
+Resultado: 2, explicita
+Tipo: Explicita. 
+
+D. 
+Resultado: NaN
+
+E.
+Resultado: true
+
+F.
+Resultado: "number"
+
+G.
+Resultaddo: false
+
+E:
+Resultado: true
