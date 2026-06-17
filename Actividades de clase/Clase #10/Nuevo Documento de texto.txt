@@ -1,0 +1,71 @@
+
+const v8  = reqioere('v8');
+
+//Const
+const variableJulian={
+    id: 1,
+    nombre: "JavaScript",
+    version: 2026,
+};
+
+const tamaño = v8.serialize(variableJulian).length;
+console.log(`El tamaño de la variable es de: ${tamaño} bytes`);
+
+typeof "JavaScript"; // "string"
+
+
+//Var
+var v8 = require('v8');
+
+var variableVar = {
+    id: 2,
+    nombre: "JavaScript",
+    version: 2026,
+};
+
+var tamañoVar = v8.serialize(variableVar).length;
+console.log(`El tamaño de la variable var es de: ${tamañoVar} bytes`);
+
+
+
+//Let
+let v8 = require('v8');
+
+let variableLet = {
+    id: 3,
+    nombre: "JavaScript",
+    version: 2026,
+};
+
+let tamañoLet = v8.serialize(variableLet).length;
+console.log(`El tamaño de la variable let es de: ${tamañoLet} bytes`);
+
+
+//rangos de edad
+// 1 - 12 es niño
+// 13 - 18 es adolecente
+//20-30 es adulto joven
+//31-60 es adulto
+//61-100 es adulto mayor 
+
+let edad = 100;
+if (edad >= 1 && edad < 12) {
+    let mensaje = "¡Niño!";
+    console.log(mensaje); 
+}
+else if (edad >= 13 && edad < 18) {
+    let mensaje = "¡Adolecente!";
+    console.log(mensaje); 
+}
+else if (edad >= 18 && edad < 30) {
+    let mensaje = "¡Adulto joven!";
+    console.log(mensaje); 
+}
+else if (edad >= 30 && edad < 60) {
+    let mensaje = "¡Adulto!";
+    console.log(mensaje); 
+}
+else if (edad >= 60 && edad <= 100) {
+    let mensaje = "¡Adulto mayor!";
+    console.log(mensaje); 
+}
