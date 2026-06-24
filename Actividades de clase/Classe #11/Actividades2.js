@@ -106,9 +106,9 @@ Resultado: 'string'
 Tipo: string
 */
 
-/* =========================
-   EJERCICIO 9 – Truthy / Falsy
-   ========================= */
+
+  //Ejercicio 9 – Truthy / Falsy
+
 
 /*
 FALSY:
