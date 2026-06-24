@@ -1,4 +1,3 @@
-
 const readline = require("readline/promises"); //Promises es para usar async/await en lugar de callbacks
 
 const {stdin: input, stdout: output}=  require("process"); 
@@ -22,5 +21,3 @@ async function iniciar(){
 }
 
 iniciar();
-
-
