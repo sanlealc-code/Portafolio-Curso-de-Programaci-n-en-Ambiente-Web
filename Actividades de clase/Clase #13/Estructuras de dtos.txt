@@ -1,0 +1,13 @@
+Tipos de estructuras: Dinamicas y estáticas.
+
+Estaticas: Aquellas en las que se definen los limites.
+Arreglos y matrices (como Array's y ArrayList's)
+
+Dinamicas: Aquellas que pueden crecer según se modifiquen.
+Pilas, colas, et
+
+Tipos de clases: POGOS (Clases tontas).
+
+
+El patrón de diseño creacional Singleton para arreglar el problema de crear nuevas instancias de una clase.
+
