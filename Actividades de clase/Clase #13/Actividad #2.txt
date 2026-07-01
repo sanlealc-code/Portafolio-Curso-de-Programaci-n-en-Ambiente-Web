@@ -1,0 +1,9 @@
+Respuesta honesta:
+1. No, crea una nueva base.
+
+2. Se creo una constante con un saludo, luego una nueva constante que atrae al base, y después se llamo a ambos.
+
+3. Pura vida Hola
+
+R. Real;
+Imprime Hola Pura vida Hola, ya que primero agarra al hijo sin modificar, luego al hijo modificado y por ultimo al padre. 

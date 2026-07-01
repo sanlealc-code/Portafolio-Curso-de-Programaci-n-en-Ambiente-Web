@@ -1,0 +1,7 @@
+1. La palabra New en curso
+
+2. Corre como una función normal.
+
+3. -Const prog = new Curso ("Programación web")
+
+
