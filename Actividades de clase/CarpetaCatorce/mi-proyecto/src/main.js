@@ -3,6 +3,13 @@ import javascriptLogo from './assets/javascript.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import { setupCounter } from './counter.js'
+import {obtenerUsuarios } from './api.js'
+import { renderizarResultado } from './ui.js'
+
+(async () => {
+  const usuarios = await obtenerUsuarios();
+  renderizarResultado(usuarios.length);
+})();
 
 document.querySelector('#app').innerHTML = `
 <section id="center">
