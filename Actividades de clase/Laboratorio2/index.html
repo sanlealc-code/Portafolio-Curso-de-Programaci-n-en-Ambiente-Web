@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendario Mundial 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Banner que solo aparece cuando falla la red por completo -->
+  <div id="banner-offline" class="banner-offline oculto" role="status">
+    Modo offline / datos no actualizados
+  </div>
+
+  <header class="cabecera">
+    <p class="cabecera__eyebrow">Mundial 2026</p>
+    <h1 class="cabecera__titulo">Calendario de partidos</h1>
+  </header>
+
+  <main class="contenedor-principal">
+
+    <section class="panel-filtros" aria-label="Filtros">
+      <div class="campo-filtro">
+        <label for="filtro-estadio">Estadio</label>
+        <select id="filtro-estadio">
+          <option value="todos">Todos los estadios</option>
+        </select>
+      </div>
+      <div class="campo-filtro">
+        <label for="filtro-fecha">Fecha</label>
+        <select id="filtro-fecha">
+          <option value="todos">Todas las fechas</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="seccion-partidos" aria-label="Partidos">
+      <h2 class="titulo-seccion">Partidos</h2>
+      <p id="error-partidos" class="mensaje-error oculto"></p>
+      <!-- Contenedor padre: aquí vive el ÚNICO listener delegado -->
+      <ul id="lista-partidos" class="lista-partidos"></ul>
+    </section>
+
+    <section class="seccion-estadios" aria-label="Estadios">
+      <h2 class="titulo-seccion">Estadios</h2>
+      <p id="error-estadios" class="mensaje-error oculto"></p>
+      <ul id="lista-estadios" class="lista-estadios"></ul>
+    </section>
+
+  </main>
+
+  <!-- Modal de re-autenticación, oculto hasta que llegue un 401 -->
+  <div id="modal-login" class="modal-overlay oculto">
+    <div class="modal-caja" role="dialog" aria-modal="true" aria-labelledby="modal-login-titulo">
+      <h2 id="modal-login-titulo">Sesión expirada</h2>
+      <p>El token ya no es válido. Ingrese sus credenciales para continuar.</p>
+      <form id="formulario-login">
+        <label for="campo-usuario">Correo electrónico</label>
+        <input id="campo-usuario" name="email" type="email" required autocomplete="username">
+
+        <label for="campo-clave">Contraseña</label>
+        <input id="campo-clave" name="clave" type="password" required autocomplete="current-password">
+
+        <p id="error-login" class="mensaje-error oculto"></p>
+        <button type="submit">Ingresar</button>
+      </form>
+    </div>
+  </div>
+
+  <template id="plantilla-partido">
+    <li class="tarjeta-partido">
+      <button class="boton-favorito" type="button" aria-label="Marcar como favorito">☆</button>
+      <p class="tarjeta-partido__fecha"></p>
+      <p class="tarjeta-partido__equipos"></p>
+      <p class="tarjeta-partido__estadio"></p>
+    </li>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

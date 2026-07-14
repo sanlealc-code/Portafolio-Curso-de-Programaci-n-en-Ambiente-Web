@@ -1,0 +1,214 @@
+/* Paleta: noche de estadio, pasto y marcador dorado */
+:root {
+  --color-fondo: #0b1f2a;
+  --color-superficie: #122c3a;
+  --color-texto: #f2f5f2;
+  --color-texto-tenue: #9fb3ba;
+  --color-acento-pasto: #3c8c5c;
+  --color-acento-oro: #c9a227;
+  --color-alerta: #d97706;
+  --color-error: #e0575a;
+  --radio-tarjeta: 10px;
+  --fuente-marcador: "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.oculto {
+  display: none !important;
+}
+
+/* Banner fijo arriba cuando no hay red */
+.banner-offline {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: var(--color-alerta);
+  color: #1a1a1a;
+  text-align: center;
+  padding: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.cabecera {
+  padding: 2.5rem 1.5rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cabecera__eyebrow {
+  margin: 0;
+  color: var(--color-acento-oro);
+  font-family: var(--fuente-marcador);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cabecera__titulo {
+  margin: 0.3rem 0 0;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.contenedor-principal {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.panel-filtros {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+.campo-filtro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.campo-filtro label {
+  font-size: 0.75rem;
+  color: var(--color-texto-tenue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.campo-filtro select {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+}
+
+.titulo-seccion {
+  font-size: 1.1rem;
+  color: var(--color-texto-tenue);
+  border-left: 3px solid var(--color-acento-pasto);
+  padding-left: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.mensaje-error {
+  color: var(--color-error);
+  background-color: rgba(224, 87, 90, 0.1);
+  border: 1px solid rgba(224, 87, 90, 0.3);
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.lista-partidos,
+.lista-estadios {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.8rem;
+}
+
+.tarjeta-partido {
+  background-color: var(--color-superficie);
+  border-radius: var(--radio-tarjeta);
+  padding: 0.9rem;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.tarjeta-partido__fecha {
+  font-family: var(--fuente-marcador);
+  color: var(--color-acento-oro);
+  font-size: 0.8rem;
+  margin: 0 0 0.4rem;
+}
+
+.tarjeta-partido__equipos {
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+}
+
+.tarjeta-partido__estadio {
+  color: var(--color-texto-tenue);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.boton-favorito {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: none;
+  border: none;
+  color: var(--color-texto-tenue);
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.boton-favorito.es-favorito {
+  color: var(--color-acento-oro);
+}
+
+.tarjeta-estadio {
+  background-color: var(--color-superficie);
+  border-radius: var(--radio-tarjeta);
+  padding: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Modal de re-autenticación */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+.modal-caja {
+  background-color: var(--color-superficie);
+  border-radius: var(--radio-tarjeta);
+  padding: 1.6rem;
+  width: min(360px, 90vw);
+}
+
+.modal-caja form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.modal-caja input {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.modal-caja button {
+  margin-top: 0.4rem;
+  background-color: var(--color-acento-pasto);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
