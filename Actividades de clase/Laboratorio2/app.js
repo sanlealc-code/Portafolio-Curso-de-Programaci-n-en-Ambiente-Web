@@ -1,4 +1,5 @@
-// Nota: el endpoint exacto de /auth/ no vino en el enunciado, se asume POST /auth/login con {usuario, clave} devolviendo {token}
+// Nota: el endpoint exacto de /auth/ no vino en el enunciado, 
+// se asume POST /auth/login con {usuario, clave} devolviendo {token}
 
 const UrlBase = "https://worldcup26.ir";
 const ClaveToken = "mundial26_token";
@@ -80,7 +81,8 @@ async function CargarEstadios() {
     ErrorEstadios.classList.add("oculto");
     ConstruirMapaEstadios(datos);
     RenderizarEstadios(datos);
-    // Si los partidos ya se pintaron sin nombre de estadio, se repintan con el nombre correcto
+    // Si los partidos ya se pintaron sin nombre de estadio, 
+    // se repintan con el nombre correcto
     if (PartidosEnMemoria.length > 0) {
       RenderizarPartidos(PartidosEnMemoria);
     }
