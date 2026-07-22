@@ -1,0 +1,5 @@
+1. La GUI: Básicamente lo que se le mostra al usuario
+
+2. El Routing: El camino entre el catálogo, la página del producto, el carrito y el proceso de pago. 
+
+3. El estado global: Para ver cómo es el estado actual del precio y el stock
