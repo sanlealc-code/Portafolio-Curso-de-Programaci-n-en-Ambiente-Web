@@ -1,0 +1,7 @@
+Parte I:
+El riesgo es XSS viene de parte del UserName de un formulario, que, sin verificarse, implica que cualquiera pueda acceder sin cumplir con los requisitos de eguridad minimos.
+ 
+
+Parte II:
+Es utilizar createElement, pasa asignar el nombre con textContent.
+CampoImputLastList para validar.

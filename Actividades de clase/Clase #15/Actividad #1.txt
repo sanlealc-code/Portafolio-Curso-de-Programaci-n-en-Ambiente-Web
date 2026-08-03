@@ -1,0 +1,8 @@
+1) Web Api de navegador. Debería imprimirxe el mensaje de hola unas 1000 vces.
+
+2) Es una API pura de ECMAScript, Se multiplicarían los valores x* 2 cambiados por cada numero del arr.
+
+3) console.log(Navigator.online) es una Web API e imprimiría todo lo registrado en el navigatorOnlien
+
+
+	*Al final, este ultimo lanza error.

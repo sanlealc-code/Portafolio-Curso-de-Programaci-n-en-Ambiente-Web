@@ -1,0 +1,9 @@
+1.
+ Básicamente agarra el document.querySelector ('ui').append(li) y se le vincula mima mente con los 200 elementos de la (li). 
+
+2. 
+document.querySelector('Li').append(fragmeatn;
+
+3. 
+Porque ya no haría falta tener que pasar línea por línea.
+
